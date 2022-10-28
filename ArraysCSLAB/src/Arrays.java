@@ -15,7 +15,7 @@ public class Arrays {
 		numbers.add(125.6);
 		numbers.add(123.146);
 		 Double max=0.0;
-		int size = ((CharSequence) numbers).length();
+		final int size = 9;
 		
 		//{ 125.6, 123.146}
 		for (Double number: numbers) {
@@ -24,12 +24,14 @@ public class Arrays {
 		    }
 		System.out.println();
 	   
-		for (int i = 1; i < ((CharSequence) numbers).length(); i++)
-            if (numbers.get(i+1) > i)
-                max = numbers.get(i+1);
+		for (int i = 1; i < size; i++) {
+			if (numbers.get(i) > max);
+			max = numbers.get(i);
+		}
+                
          
-        System.out.println("The largest element in the array is"+max);
-    }
+        System.out.println("The largest element in the array is "+max);
+    
 
 	}
 
