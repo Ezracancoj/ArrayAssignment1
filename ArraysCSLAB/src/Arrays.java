@@ -14,8 +14,9 @@ public class Arrays {
 		numbers.add(123.145);
 		numbers.add(125.6);
 		numbers.add(123.146);
-		 Double max=0.0;
-		final int size = 9;
+		Double max=0.0;
+		int negativeNums = 0;
+		
 		
 		//{ 125.6, 123.146}
 		for (Double number: numbers) {
@@ -24,15 +25,24 @@ public class Arrays {
 		    }
 		System.out.println();
 	   
-		for (int i = 1; i < size; i++) {
-			if (numbers.get(i) > max);
-			max = numbers.get(i);
+		for (Double number: numbers) {
+			if (number > max) {
+			max = number;
+			}
 		}
                 
          
         System.out.println("The largest element in the array is "+max);
+        
+        for (Double number: numbers) {
+        	if (number < 0) {
+        		negativeNums += 1;
+    			}
+        
+        }
     
-
+        System.out.println("There are "+ negativeNums +" negative numbers in the array");
 	}
 
 }
+
